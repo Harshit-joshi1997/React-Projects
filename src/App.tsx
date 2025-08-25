@@ -2,7 +2,8 @@ import './App.css'
 import Cards from './components/Cards'
 import Navbar from './components/Navbar'
 import Slider from './components/Slider'
-import 'flowbite';
+import Forms from './components/Forms'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <div>
         <div className="pt-15">
           <Cards />
+          <Forms/>
+          <Footer/>
         </div>
       </div>
     </>
