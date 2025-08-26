@@ -1,4 +1,4 @@
-
+import about from '../assets/about.jpg'
 
 const About = () => {
   return (
@@ -6,8 +6,8 @@ const About = () => {
     <section className="bg-gray-50 py-16">
   <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
     
-    <div className="w-full md:w-1/2 mb-8 md:mb-0">
-      <img src="/path/to/your-image.jpg" alt="Team or Brand" className="rounded-lg shadow-lg"/>
+    <div className="w-min md:w-1/2 mb-8 md:mb-0">
+      <img src={about} alt="Team or Brand" className="rounded-lg shadow-lg"/>
     </div>
 
     
@@ -37,7 +37,7 @@ const About = () => {
       </div>
 
       <a href="/contact"
-         className="inline-block bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition">
+         className="inline-block  text-white bg-blue-800 py-3 px-6 rounded-lg hover:bg-indigo-700  transition">
         Get in Touch
       </a>
     </div>
