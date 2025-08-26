@@ -1,6 +1,5 @@
 import './App.css'
 import Cards from './components/Cards'
-import Navbar from './components/Navbar'
 import Slider from './components/Slider'
 import Forms from './components/Forms'
 import Footer from './components/Footer'
@@ -8,10 +7,9 @@ import Footer from './components/Footer'
 
 function App() {
   
-
   return (
     <>
-      <Navbar />
+     
       <div className='flex'>
         <div className="flex-1 p-6 mt-5">
           <h1 className="text-3xl font-bold bg-gradient-to-r from blue-500 to-blue-900 bg-clip-text text-transparent">Vehicle Hub</h1>
