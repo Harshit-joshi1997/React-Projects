@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+
 
 const Forms = () => {
   const {
@@ -7,12 +9,12 @@ const Forms = () => {
     formState: { errors }
   } = useForm();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
      try {
-      
+      await axios.post('http://localhost:8000/forms', data)
+      alert("Form submitted successfully!");
      } catch (error) {
       console.error("Error submitting form:", error);
-      
      }
     console.log(data);
   };
@@ -30,7 +32,7 @@ const Forms = () => {
               placeholder="Enter your name"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               maxLength={20}
-              {...register('name', { required: "Name is required", maxLength: 20 })}
+              {...register('fullname', { required: "Name is required", maxLength: 20 })}
             />
             {errors.name?.message && typeof errors.name.message === 'string' && (
               <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -65,7 +67,7 @@ const Forms = () => {
               type="tel"
               placeholder="Enter your phone number"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              {...{ maxLength: 15 }}
+              {...register('phone',{ maxLength: 15 })}
             />
           </div>
 
@@ -77,7 +79,7 @@ const Forms = () => {
                 type="text"
                 placeholder="Enter your city"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                {...{ maxLength: 50 }}
+                {...register('city',{ maxLength: 50 })}
               />
             </div>
             <div>
@@ -86,7 +88,7 @@ const Forms = () => {
                 type="text"
                 placeholder="Enter your state"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                {...{ maxLength: 2 }}
+                {...register('state', { maxLength: 20 })}
               />
             </div>
           </div>
@@ -98,7 +100,7 @@ const Forms = () => {
               rows={4}
               placeholder="Write your message..."
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              {...{ maxLength: 500 }}
+              {...register('message', { maxLength: 500 })}
             ></textarea>
           </div>
 
