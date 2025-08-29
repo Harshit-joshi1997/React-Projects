@@ -64,11 +64,20 @@ const Forms = () => {
           <div>
             <label className="block text-gray-700 font-medium mb-1">Phone Number</label>
             <input
-              type="tel"
-              placeholder="Enter your phone number"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              {...register('phone',{ maxLength: 15 ,minLength:10})}
-            />
+  type="tel"
+  placeholder="Enter your phone number"
+  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+  {...register('phone', {
+    required: "Phone number is required",
+    pattern: {
+      value: /^\d{10}$/,
+      message: "Phone number should have exactly 10 digits"
+    }
+  })}
+/>
+{errors.phone?.message && typeof errors.phone.message === 'string' && (
+  <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+)}
           </div>
 
           {/* City & State side by side */}

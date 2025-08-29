@@ -20,6 +20,7 @@ const Cards = () => {
             <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">2021 Tesla Model S</h3>
                 <p className="text-gray-600 mb-4">Electric Sedan</p>
+                <p className='mb-2'>$100/day</p>
                 <NavLink to="/tesla">
                   <button className="w-full py-2 rounded-lg text-white font-medium
              bg-gradient-to-r from-blue-600 to-blue-800
@@ -41,6 +42,7 @@ const Cards = () => {
             <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">2020 BMW X5</h3>
                 <p className="text-gray-600 mb-4">Luxury SUV</p>
+                <p className='mb-2'>$120/day</p>
                 <NavLink to="/bmw1">
                 <button className="w-full py-2 rounded-lg text-white font-medium
              bg-gradient-to-r from-blue-600 to-blue-800
@@ -63,6 +65,7 @@ const Cards = () => {
                
                      <h3 className="text-lg font-semibold mb-2">2020 BMW X5</h3>
                 <p className="text-gray-600 mb-4">Luxury SUV</p>
+                <p className='mb-2'>$150/day</p>
                 <NavLink to="/bmw2">
                 <button className="w-full py-2 rounded-lg text-white font-medium
              bg-gradient-to-r from-blue-600 to-blue-800
@@ -84,6 +87,7 @@ const Cards = () => {
                
                      <h3 className="text-lg font-semibold mb-2">2020 BMW X5</h3>
                 <p className="text-gray-600 mb-4">Luxury SUV</p>
+                <p className='mb-2'>$170/day</p>
                 <NavLink to="/bmw3">
                 <button className="w-full py-2 rounded-lg text-white font-medium
              bg-gradient-to-r from-blue-600 to-blue-800

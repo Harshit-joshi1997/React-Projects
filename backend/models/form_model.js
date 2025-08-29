@@ -7,7 +7,8 @@ const formSchema = new mongoose.Schema({
   city: String,
   state: String,
   message: String,
-});
+}, { timestamps: true });
+
 
 const Form = mongoose.model('Form', formSchema);
 
